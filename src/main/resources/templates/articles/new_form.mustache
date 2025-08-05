@@ -1,0 +1,24 @@
+{{>layout/header}}
+
+<form class="container" action="/articles/create" method="post">
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+
+    <div class="mb-3">
+        <label for="form-label">내용</label>
+        <textarea class="form-control" row="3" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">제출</button>
+    <a href="index">목록으로 돌아가기</a>
+</form>
+{{>layout/footer}}
+
+<!--action은 주소, method는 방식을 지정-->
+<!--Data to object = DTO-->
+<!--Data는 new_form에서 ArticleForm으로 넘어감-->
+<!--data 입력 후 whitelabelError가 나는 이유는 return이 없어서-->
+<!--repo는 기능 모음집, entity는 자바에서 DB로 생성될 수 있게 변환 시켜주는 역할-->
+<!--getmapping은 데이터를 가져오는 것, postmapping은 데이터를 보내는 것-->
+<!--post는 내용물이 있고, get은 내용물이 없고 있더라도 외부에 노출됨-->
